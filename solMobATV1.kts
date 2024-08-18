@@ -33,7 +33,7 @@ class Biblioteca(val nome: String) {
 
     fun adicionarLivro(livro: Livro) {
         livros.add(livro)
-        println("O livro ${livro.titulo} adicionado à biblioteca.")
+        println("O livro ${livro.titulo} foi adicionado à biblioteca.")
     }
 
     fun exibirLivrosDisponiveis() {
