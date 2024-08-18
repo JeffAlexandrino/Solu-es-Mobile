@@ -23,7 +23,7 @@ class Usuario(val nome: String) {
             livro.disponivel = true
             println("$nome devolveu o livro: ${livro.titulo}")
         } else {
-            println("$nome não tem o livro ${livro.titulo} para devolver.")
+            println("$nome não possui o livro ${livro.titulo} para devolver.")
         }
     }
 }
@@ -33,7 +33,7 @@ class Biblioteca(val nome: String) {
 
     fun adicionarLivro(livro: Livro) {
         livros.add(livro)
-        println("Livro ${livro.titulo} adicionado à biblioteca.")
+        println("O livro ${livro.titulo} adicionado à biblioteca.")
     }
 
     fun exibirLivrosDisponiveis() {
@@ -44,12 +44,12 @@ class Biblioteca(val nome: String) {
 
 // ------------------------- FLUXO PRINCIPAL -------------------------
 fun main() {
-    // Criando instâncias das classes
+    // Criando classes
     val biblioteca = Biblioteca("Bibliotecaria")
     val usuario1 = Usuario("Fulano")
     val usuario2 = Usuario("Ciclano")
 
-    // Adicionando alguns livros à biblioteca
+    // Adicionando  livros
     val livro1 = Livro("O Senhor dos Anéis", "J.R.R. TOLKIEN", true)
     val livro2 = Livro("Rangers - Ordem dos Arqueiros", "John Flanagan", true)
     val livro3 = Livro("As Crônicas de Nárnia", "C. S. Lewis", true)
@@ -58,20 +58,20 @@ fun main() {
     biblioteca.adicionarLivro(livro2)
     biblioteca.adicionarLivro(livro3)
 
-    // Exibindo a lista de livros disponíveis antes dos empréstimos
+    // Exibindo a lista de livros disponíveis antes de emprestar
     biblioteca.exibirLivrosDisponiveis()
 
     // Emprestando e devolvendo alguns livros
     usuario1.emprestarLivro(livro1)
     usuario2.emprestarLivro(livro2)
 
-    // Exibindo a lista de livros disponíveis depois dos empréstimos
+    // Exibindo a lista de livros disponíveis depois de emprestar
     biblioteca.exibirLivrosDisponiveis()
 
-    // Devolvendo livros
+    // Devolver
     usuario1.devolverLivro(livro1)
     usuario2.devolverLivro(livro2)
 
-    // Exibindo a lista de livros disponíveis depois das devoluções
+    // Exibindo a lista de livros disponíveis depois de devolver
     biblioteca.exibirLivrosDisponiveis()
 }
