@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "BasicNavigation2",
-    "slug": "BasicNavigation2",
+    "name": "BasicNavi",
+    "slug": "BasicNavi",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
